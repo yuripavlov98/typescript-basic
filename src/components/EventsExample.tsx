@@ -5,7 +5,7 @@ const EventsExample = () => {
 	const [isDrag, setIsDrag] = useState<boolean>(false);
 	const inputRef = useRef<HTMLInputElement>(null);
 
-    const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+	const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setValue(e.target.value);
 	};
 
@@ -35,8 +35,13 @@ const EventsExample = () => {
 
 	return (
 		<div>
-			<input value={value} onChange={changeHandler} type='text' placeholder="управляемый" />
-            <input ref={inputRef} type='text' placeholder="неуправляемый" />
+			<input
+				value={value}
+				onChange={changeHandler}
+				type='text'
+				placeholder='управляемый'
+			/>
+			<input ref={inputRef} type='text' placeholder='неуправляемый' />
 			<button onClick={clickHandler}>WER</button>
 			<div
 				onDrag={dragHandller}
